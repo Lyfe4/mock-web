@@ -1,0 +1,394 @@
+.attorney-profile-page {
+    padding-top: 64px;
+    background-color: #f8fafc;
+  }
+  
+  .loading-screen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+  }
+  
+  .loading-spinner {
+    width: 4rem;
+    height: 4rem;
+    border: 4px solid #e2e8f0;
+    border-top-color: #1e293b;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .error-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .attorney-hero {
+    background-color: #1e293b;
+    color: white;
+    padding: 4rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .attorney-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(45deg, #233044 25%, transparent 25%),
+      linear-gradient(-45deg, #233044 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #233044 75%),
+      linear-gradient(-45deg, transparent 75%, #233044 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    opacity: 0.05;
+  }
+  
+  .attorney-hero-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+  }
+  
+  .back-link:hover {
+    color: white;
+  }
+  
+  .attorney-main-info {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+  
+  @media (max-width: 768px) {
+    .attorney-main-info {
+      grid-template-columns: 1fr;
+    }
+  }
+  .attorney-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .attorney-image {
+    height: 400px;
+    background-color: #334155;
+  }
+  
+  .attorney-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background-color: white;
+    color: #1e293b;
+    transform: translateY(-2px);
+  }
+  
+  .attorney-info h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .attorney-info h2 {
+    font-size: 1.5rem;
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .expertise {
+    color: #60a5fa;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .quick-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cbd5e1;
+  }
+  
+  .attorney-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .content-tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+  }
+  
+  .tab-button {
+    padding: 1rem 1.5rem;
+    color: #64748b;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .tab-button:hover {
+    color: #1e293b;
+  }
+  
+  .tab-button.active {
+    color: #1e293b;
+    border-bottom-color: #60a5fa;
+  }
+  
+  .tab-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab-content h3 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .description-section p {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  
+  .expertise-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .expertise-list li {
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .expertise-list li::before {
+    content: '•';
+    color: #60a5fa;
+  }
+  
+  .language-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .language-tag {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+  }
+  
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .case-card {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .case-card h4 {
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .case-card p {
+    color: #475569;
+    margin-bottom: 1rem;
+  }
+  
+  .case-year {
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+  
+  .education-list,
+  .awards-list,
+  .publications-list,
+  .engagements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .education-item,
+  .award-item,
+  .publication-item,
+  .engagement-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .education-item:hover,
+  .award-item:hover,
+  .publication-item:hover,
+  .engagement-item:hover {
+    transform: translateX(5px);
+  }
+  
+  .education-icon,
+  .award-icon,
+  .publication-icon,
+  .engagement-icon {
+    color: #60a5fa;
+    flex-shrink: 0;
+  }
+  
+  .education-details,
+  .award-details,
+  .publication-details,
+  .engagement-details {
+    flex: 1;
+  }
+  
+  .education-details h4,
+  .award-details h4,
+  .publication-details h4,
+  .engagement-details h4 {
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .education-details p,
+  .award-details p,
+  .publication-details p,
+  .engagement-details p {
+    color: #475569;
+    margin-bottom: 0.25rem;
+  }
+  
+  .education-year,
+  .award-year,
+  .publication-year {
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+  
+  .engagement-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .engagement-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .attorney-hero {
+      padding: 2rem 1rem;
+    }
+  
+    .quick-stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .content-tabs {
+      padding-bottom: 1rem;
+    }
+  
+    .tab-content {
+      padding: 1rem;
+    }
+  }
